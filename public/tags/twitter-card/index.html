@@ -1,29 +1,414 @@
-<!doctype html><html lang=en><head><title>Twitter-Card</title>
-<meta charset=utf-8><meta name=X-UA-Compatible content="IE=edge"><meta name=google-site-verification content><meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=5" name=viewport><meta content="telephone=no" name=format-detection><meta name=description content><meta name=renderer content="webkit"><meta name=theme-color content="#ffffff"><meta property="og:url" content="/tags/twitter-card/"><meta property="og:site_name" content="DAITA"><meta property="og:title" content="Twitter-Card"><meta property="og:locale" content="en"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Twitter-Card"><link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css><link rel=stylesheet href=/scss/dark-mode.min.e0cca49fb5094f3265ef0d4ddc66a0192d21691630c1a427951efefb0e42a809.css integrity="sha256-4Mykn7UJTzJl7w1N3GagGS0haRYwwaQnlR7++w5CqAk=" media=screen><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons"></head><body><div id=app><div class=single-column-drawer-container id=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }"><div class=drawer-content><div class=drawer-menu><a class="a-block drawer-menu-item false" href=/about/>About
-</a><a class="a-block drawer-menu-item false" href=/blog>Blog
-</a><a class="a-block drawer-menu-item false" href=/categories>Categories
-</a><a class="a-block drawer-menu-item false" href=/services/>Services
-</a><a class="a-block drawer-menu-item active" href=/tags>Tags
-</a><a class="a-block drawer-menu-item false" href=/posts>Archive</a></div></div></div><transition name=fade><div id=drawer-mask v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div></transition><nav id=navBar class="navbar sticky-top navbar-light single-column-nav-container"><div id=navBackground class=nav-background></div><div class="container container-narrow nav-content"><button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
-<i class=material-icons>menu
-</i></button>
-<a id=navTitle class=navbar-brand href=/>D<span class=red>AI</span>TA</a></div></nav><div class=single-column-header-container id=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"><a href=/><div class=single-column-header-title>D<span class=red>AI</span>TA</div><div class=single-column-header-subtitle>My Personal Blog</div></a></div><div id=content><div id=streamContainer class=stream-container><div class="post-list-container post-list-container-shadow"><div class="post-item-wrapper post-item-wrapper-no-hover"><div class="post-item post-item-no-gaps"><div class=post-item-info-wrapper><div class="post-item-title post-item-title-small"><a href=/tags/>Tags</a> / Twitter-Card</div></div></div></div><a href=/blog/twitter-card-sample/ class=a-block><div class=post-item-wrapper><div class="post-item post-item-no-gaps"><div class=post-item-info-wrapper><div class=post-item-title>Twitter Card Sample</div><div class=post-item-meta>2025-05-05
-&emsp;
-<i class=material-icons style=font-size:10px>schedule</i>
-16 s
-&emsp;</div></div></div></div></a><a href=/blog/test-content/ class=a-block><div class=post-item-wrapper><div class="post-item post-item-no-gaps"><div class=post-item-info-wrapper><div class=post-item-title>Sample</div><div class=post-item-meta>2025-05-05
-&emsp;
-<i class=material-icons style=font-size:10px>schedule</i>
-0 s
-&emsp;</div></div></div></div></a><a href=/ class=a-block><div class=post-item-wrapper><div class="post-item post-item-no-gaps"><div class=post-item-info-wrapper><div class=post-item-title>landing main page</div><div class=post-item-meta>2024-06-10
-&emsp;
-<i class=material-icons style=font-size:10px>schedule</i>
-0 s
-&emsp;</div></div></div></div></a></div></div></div><div id=sideContainer class=side-container><a class="a-block nav-head false" href=/><div class=nav-title>D<span class=red>AI</span>TA</div><div class=nav-subtitle>My Personal Blog</div></a><div class=nav-link-list><a class="a-block nav-link-item false" href=/about/>About
-</a><a class="a-block nav-link-item false" href=/blog>Blog
-</a><a class="a-block nav-link-item false" href=/categories>Categories
-</a><a class="a-block nav-link-item false" href=/services/>Services
-</a><a class="a-block nav-link-item active" href=/tags>Tags
-</a><a class="a-block nav-link-item false" href=/posts>Archive</a></div><div class=nav-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://risehere.net/>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-2024 DAITA</div></div><div id=extraContainer class=extra-container><div class=toc-wrapper></div><div class=pagination><a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }"><i class="material-icons pagination-action-icon">keyboard_arrow_up</i></a></div></div><div id=single-column-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://risehere.net/>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-2024 DAITA</div></div><script src=/js/journal.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<title>Twitter-Card</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=5" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:url" content="//localhost:1313/tags/twitter-card/">
+  <meta property="og:site_name" content="DAITA">
+  <meta property="og:title" content="Twitter-Card">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Twitter-Card">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.e0cca49fb5094f3265ef0d4ddc66a0192d21691630c1a427951efefb0e42a809.css" integrity="sha256-4Mykn7UJTzJl7w1N3GagGS0haRYwwaQnlR7&#43;&#43;w5CqAk=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about/">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/blog">
+                    Blog
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/services/">
+                    Services
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/posts">
+                    Archive
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="//localhost:1313/">
+            D<span class="red">AI</span>TA
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="//localhost:1313/">
+        <div class="single-column-header-title">D<span class="red">AI</span>TA</div>
+        
+        <div class="single-column-header-subtitle">My Personal Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="post-item-info-wrapper">
+                    <div class="post-item-title  post-item-title-small">
+                        <a href="/tags/">Tags</a> / Twitter-Card
+                    </div>
+                </div>
+            </div>
+        </div><a href="/blog/twitter-card-sample/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Twitter Card Sample
+                        </div>
+                        <div class="post-item-meta">
+    2025-05-05
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    16 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/blog/test-content/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Sample
+                        </div>
+                        <div class="post-item-meta">
+    2025-05-05
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    0 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a><a href="/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                             landing main page
+                        </div>
+                        <div class="post-item-meta">
+    2024-06-10
+    &emsp;
+    
+    
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    
+
+    
+    
+
+    
+    0 s
+    
+    
+    &emsp;
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </a></div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="//localhost:1313/">
+    
+        <div class="nav-title">
+            D<span class="red">AI</span>TA
+        </div>
+        
+        <div class="nav-subtitle">
+            My Personal Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about/">
+                About
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/blog">
+                Blog
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/services/">
+                Services
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/posts">
+                Archive
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024 DAITA
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024 DAITA
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>

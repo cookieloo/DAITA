@@ -1,12 +1,17 @@
 [build]
   publish = "public"
-  command = "git submodule update --init --recursive && hugo --gc --minify"
+  command = "git submodule update --init --recursive && hugo --gc --minify --templateMetrics --templateMetricsHints"
 
 [build.environment]
   HUGO_VERSION = "0.147.2"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"

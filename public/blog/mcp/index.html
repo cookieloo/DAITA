@@ -1,20 +1,1078 @@
-<!doctype html><html lang=en><head><title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title>
-<meta charset=utf-8><meta name=X-UA-Compatible content="IE=edge"><meta name=google-site-verification content><meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=5" name=viewport><meta content="telephone=no" name=format-detection><meta name=description content="MCP(Model Context Protocol)에 대한 설명"><meta name=renderer content="webkit"><meta name=theme-color content="#ffffff"><meta property="og:url" content="/blog/mcp/"><meta property="og:site_name" content="DAITA"><meta property="og:title" content="MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까"><meta property="og:description" content="MCP(Model Context Protocol)에 대한 설명"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2025-04-30T00:00:00+00:00"><meta property="article:modified_time" content="2025-04-30T00:00:00+00:00"><meta property="article:tag" content="Mcp"><meta property="article:tag" content="Protocol"><meta property="article:tag" content="Agent"><meta property="article:tag" content="AI"><meta property="article:tag" content="Llm"><meta property="article:tag" content="Anthropic"><meta name=twitter:card content="summary"><meta name=twitter:title content="MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까"><meta name=twitter:description content="MCP(Model Context Protocol)에 대한 설명"><script src=/js/toc.js></script><link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css><link rel=stylesheet href=/scss/dark-mode.min.e0cca49fb5094f3265ef0d4ddc66a0192d21691630c1a427951efefb0e42a809.css integrity="sha256-4Mykn7UJTzJl7w1N3GagGS0haRYwwaQnlR7++w5CqAk=" media=screen><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons"></head><body><div id=app><div class=single-column-drawer-container id=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }"><div class=drawer-content><div class=drawer-menu><a class="a-block drawer-menu-item false" href=/about/>About
-</a><a class="a-block drawer-menu-item active" href=/blog>Blog
-</a><a class="a-block drawer-menu-item false" href=/categories>Categories
-</a><a class="a-block drawer-menu-item false" href=/services/>Services
-</a><a class="a-block drawer-menu-item false" href=/tags>Tags
-</a><a class="a-block drawer-menu-item false" href=/posts>Archive</a><div class=toc><div class=toc-content><center>- CATALOG -</center><ul><li><a href=#mcp-%ec%86%8c%ea%b0%9c class=nav-mcp-소개>MCP 소개</a></li><li><a href=#mcp%ec%9d%98-%ea%b5%ac%ec%a1%b0%ec%99%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac class=nav-mcp의-구조와-작동-원리>MCP의 구조와 작동 원리</a></li><li><a href=#mcp%ec%9d%98-%ed%98%81%ec%8b%a0%ec%a0%81-%ea%b8%b0%ec%88%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95 class=nav-mcp의-혁신적-기술-및-특징>MCP의 혁신적 기술 및 특징</a></li><ul><li><a href=#%ed%91%9c%ec%a4%80%ed%99%94%eb%90%9c-%eb%8f%84%ea%b5%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4 class=nav-표준화된-도구-인터페이스>표준화된 도구 인터페이스</a></li><li><a href=#nm-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%86%8c class=nav-nm-문제-해소>N×M 문제 해소</a></li><li><a href=#%ec%9e%ac%ed%98%84%ec%84%b1 class=nav-재현성>재현성</a></li><li><a href=#%eb%8f%99%ec%a0%81-%ea%b2%80%ec%83%89 class=nav-동적-검색>동적 검색</a></li><li><a href=#%ec%96%91%eb%b0%a9%ed%96%a5-%eb%b0%8f-%eb%b3%b4%ec%95%88 class=nav-양방향-및-보안>양방향 및 보안</a></li><li><a href=#%ed%99%95%ec%9e%a5%ec%84%b1 class=nav-확장성>확장성</a></li><ul><li><a href=#%ea%b8%b0%ec%a1%b4-api%ec%99%80-mcp%ec%9d%98-%ec%b0%a8%ec%9d%b4 class=nav-기존-api와-mcp의-차이>기존 API와 MCP의 차이</a></li></ul></ul><li><a href=#mcp%eb%8a%94-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%8f%99%ec%9e%91%ed%95%98%eb%82%98%ec%9a%94 class=nav-mcp는-어떻게-동작하나요>MCP는 어떻게 동작하나요?</a></li><ul><ul><li><a href=#-mcp%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%97%ac%ed%96%89-%ea%b3%84%ed%9a%8d-%ec%88%98%eb%a6%bd-%ec%98%88%ec%8b%9c class=nav--mcp를-활용한-여행-계획-수립-예시>🧭 MCP를 활용한 여행 계획 수립 예시</a></li></ul></ul><li><a href=#%ec%99%9c-%ec%9d%b4%eb%a0%87%ea%b2%8c-%ed%99%94%ec%a0%9c%ea%b0%80-%eb%90%98%ec%97%88%ec%9d%84%ea%b9%8c-mcp%ea%b0%80-%ec%8a%b9%eb%a6%ac%ed%95%9c-%ec%9d%b4%ec%9c%a0%eb%8a%94 class=nav-왜-이렇게-화제가-되었을까-mcp가-승리한-이유는>왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?</a></li></ul></div></div></div></div></div><transition name=fade><div id=drawer-mask v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div></transition><nav id=navBar class="navbar sticky-top navbar-light single-column-nav-container"><div id=navBackground class=nav-background></div><div class="container container-narrow nav-content"><button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
-<i class=material-icons>menu
-</i></button>
-<a id=navTitle class=navbar-brand href=/>D<span class=red>AI</span>TA</a></div></nav><div class=single-column-header-container id=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"><a href=/><div class=single-column-header-title>D<span class=red>AI</span>TA</div><div class=single-column-header-subtitle>My Personal Blog</div></a></div><div id=content><div id=streamContainer class=stream-container><div class="post-list-container post-list-container-shadow"><div class=post><div class=post-head-wrapper-text-only><div class=post-title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까<div class=post-subtitle>MCP(Model Context Protocol)에 대한 설명</div><div class=post-meta><time>2025-04-30</time></div></div></div><div class=post-body-wrapper><div class=post-body v-pre><h1 id=mcp-소개>MCP 소개</h1><p><a href=https://modelcontextprotocol.io/introduction>Model Context Protocol</a> (MCP)는 <a href=https://www.anthropic.com/news/model-context-protocol>Anthropic에서 2024년 말에 도입한</a> 새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 <strong>USB-C</strong>와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.</p><p><img src=https://www.philschmid.de/static/blog/mcp-introduction/api.png alt=api></p><p align=center><a href=https://www.philschmid.de/mcp-introduction>출처</a></p><h1 id=mcp의-구조와-작동-원리>MCP의 구조와 작동 원리</h1><p>MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.</p><ul><li><strong>Host</strong>: 사용자가 직접 상호작용하는 애플리케이션으로, 여러 클라이언트를 관리하고 보안 정책을 적용합니다.</li><li><strong>Client</strong>: 호스트 내부에서 MCP 서버와의 연결을 관리하며 기능 협상 및 보안 경계를 유지합니다.</li><li><strong>Server</strong>: 외부 시스템과 MCP를 연결하는 다리 역할로, 표준 API를 통해 도구, 리소스, 프롬프트를 제공합니다.
-<img src=https://www.philschmid.de/static/blog/mcp-introduction/overview.png alt=overview></li></ul><p align=center><a href=https://www.philschmid.de/mcp-introduction align=center>출처</a></p><h1 id=mcp의-혁신적-기술-및-특징>MCP의 혁신적 기술 및 특징</h1><h2 id=표준화된-도구-인터페이스>표준화된 도구 인터페이스</h2><p>MCP는 다음의 세 가지 인터페이스를 표준화하여 제공합니다:</p><ul><li><strong>Tools (Model-controlled)</strong>: AI가 특정 작업 수행을 위해 호출하는 함수(API)</li><li><strong>Resources (Application-controlled)</strong>: AI가 접근 가능한 데이터 소스</li><li><strong>Prompts (User-controlled)</strong>: 특정 작업 수행을 위한 사전 정의된 템플릿
-<img src=https://www.philschmid.de/static/blog/mcp-introduction/overview.png alt=overview></li></ul><p align=center><a href=https://www.philschmid.de/mcp-introduction align=center>출처</a></p><h2 id=nm-문제-해소>N×M 문제 해소</h2><p>기존의 복잡한 통합 문제를 해결해 MCP 서버 하나만 개발하면 여러 AI 클라이언트와 통합이 가능합니다.</p><h2 id=재현성>재현성</h2><p>모든 데이터셋, 환경 설정, 하이퍼파라미터 등을 통합 관리하여 결과의 재현성을 높입니다.</p><h2 id=동적-검색>동적 검색</h2><p>AI 모델이 사용 가능한 도구를 동적으로 검색하고 활용할 수 있게 합니다.</p><h2 id=양방향-및-보안>양방향 및 보안</h2><p>MCP는 실시간 양방향 통신을 지원하며 OAuth 2.1 인증 프레임워크를 통해 강력한 보안과 규정 준수를 보장합니다.</p><h2 id=확장성>확장성</h2><p>컨텍스트 관리를 표준화하여 LLM의 효율성을 높이고, 명확한 역할 분리로 보안 제어를 강화합니다.</p><h3 id=기존-api와-mcp의-차이>기존 API와 MCP의 차이</h3><ul><li><strong>설계 목적의 차이</strong><ul><li>기존 API(OpenAPI, GraphQL, SOAP 등): 특정 기능 수행 및 데이터 검색 중심</li><li>MCP: AI 에이전트 및 언어 모델(LLM)의 컨텍스트 활용과 추론 능력 향상에 특화</li></ul></li><li><strong>통신 방식의 차이</strong><ul><li>기존 API: 단방향 요청-응답 방식</li><li>MCP: 실시간 양방향 통신 지원, 복잡한 워크플로 관리 및 자율적 작업 수행 가능</li></ul></li></ul><h1 id=mcp는-어떻게-동작하나요>MCP는 어떻게 동작하나요?</h1><p><img src=https://www.philschmid.de/static/blog/mcp-introduction/architecture.png alt=architecture></p><p align=center><a href=https://www.philschmid.de/mcp-introduction align=center>출처</a></p><p>다음은 **&ldquo;사용자가 서울로 주말 여행을 떠나고 싶어 하며, 날씨 정보, 인기 여행지, 현지 맛집, 대중교통 정보를 고려해 여행 계획을 수립하는 경우&rdquo;**를 가정한 MCP 동작 방식 예시입니다:</p><h3 id=-mcp를-활용한-여행-계획-수립-예시>🧭 MCP를 활용한 여행 계획 수립 예시</h3><p><strong>가정: 사용자가 주말 동안 서울을 여행하고 싶어 하며, 다음과 같은 정보를 포함하여 여행 일정을 계획하려 합니다.</strong></p><ul><li>서울의 주말 날씨 정보</li><li>서울의 인기 관광 명소</li><li>현지인이 추천하는 서울 맛집</li><li>서울 내 교통편 및 대중교통 정보</li></ul><p>이 가정을 바탕으로 MCP의 동작 흐름은 다음과 같습니다:</p><ol><li><strong>초기화 (Initialization)</strong><ul><li>Host 앱(예: Claude Desktop)이 시작되면 MCP 클라이언트가 생성되어 MCP 서버와 연결을 설정합니다.</li></ul></li><li><strong>탐색 (Discovery)</strong><ul><li>클라이언트는 서버가 제공하는 기능(도구, 리소스, 프롬프트)을 확인합니다.</li><li>서버는 &ldquo;날씨 정보 조회&rdquo;, &ldquo;관광지 추천&rdquo;, &ldquo;맛집 리스트&rdquo;, &ldquo;대중교통 조회&rdquo; 등의 기능을 제공합니다.</li></ul></li><li><strong>컨텍스트 제공 (Context Provision)</strong><ul><li>사용자가 &ldquo;서울에서 주말 여행을 계획하고 싶어요"라고 입력하면, 호스트는 해당 컨텍스트를 MCP가 이해할 수 있는 형태로 제공합니다.</li></ul></li><li><strong>호출 (Invocation)</strong><ul><li>AI 모델이 &ldquo;서울의 이번 주말 날씨 정보&rdquo;, &ldquo;서울의 인기 관광지 추천&rdquo;, &ldquo;서울 현지 맛집 목록&rdquo;, &ldquo;서울 교통수단 정보"가 필요하다고 판단하고 요청을 생성합니다.</li><li>Host는 이를 MCP 클라이언트를 통해 서버로 전달합니다.</li></ul></li><li><strong>실행 (Execution)</strong><ul><li>MCP 서버는 요청을 받고 각각의 정보를 수집합니다. 예를 들어 날씨 API, 관광정보 데이터베이스, 집 추천 플랫폼, 대중교통 API 등에서 데이터를 조회합니다.</li></ul></li><li><strong>응답 (Response)</strong><ul><li>서버는 수집된 날씨 정보, 인기 관광지 목록, 맛집 정보, 교통 정보를 클라이언트를 통해 Host로 반환합니다.</li></ul></li><li><strong>완료 (Completion)</strong><ul><li>Host는 전달받은 정보를 AI 모델 컨텍스트에 통합하여, 사용자에게 최적화된 서울 여행 일정을 추천합니다.</li></ul></li></ol><h1 id=왜-이렇게-화제가-되었을까-mcp가-승리한-이유는>왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?</h1><ul><li><strong>AI-Native 설계</strong><ul><li>MCP는 AI 에이전트 요구에 맞춰 설계됨</li><li>도구(Tools), 리소스(Resources), 프롬프트(Prompts)의 명확한 역할 구분</li></ul></li><li><strong>우수한 오픈 명세와 강력한 후원</strong><ul><li>뛰어난 공개 명세 제공 (명세 자체로 경쟁자 압도)</li></ul></li><li><strong>검증된 기술 기반</strong><ul><li>기존의 Language Server Protocol(LSP), JSON-RPC 2.0 등 신뢰성 높은 표준 활용</li></ul></li><li><strong>강력한 초기 생태계와 직접 활용(Dogfooding)</strong><ul><li>Anthropic이 Claude Desktop, git, Slack 등 다양한 내부 레퍼런스 구현 제</li><li>MCP Inspector, SDK(Python, TypeScript, Java, Kotlin, C# 등) 지원으로 초기 확산 가속화</li></ul></li><li><strong>네트워크 효과로 인한 확산</strong><ul><li>Cursor, Windsurf, Composio 등의 기업과 커뮤니티가 빠르게 MCP를 통합 및 확장</li><li>OpenAI를 포함한 주요 기업들도 MCP 지원 발표</li><li>GitHub, Slack, 데이터베이스, Docker 등 수천 개의 MCP 커뮤니티 서버 구축 활성화</li></ul></li></ul></div></div><nav class=post-pagination><a class=newer-posts href=/blog/test-content/>Next<br>Sample
-</a><a class=older-posts href=/about/>Previous<br>About</a></nav></div></div></div></div><div id=sideContainer class=side-container><a class="a-block nav-head false" href=/><div class=nav-title>D<span class=red>AI</span>TA</div><div class=nav-subtitle>My Personal Blog</div></a><div class=nav-link-list><a class="a-block nav-link-item false" href=/about/>About
-</a><a class="a-block nav-link-item active" href=/blog>Blog
-</a><a class="a-block nav-link-item false" href=/categories>Categories
-</a><a class="a-block nav-link-item false" href=/services/>Services
-</a><a class="a-block nav-link-item false" href=/tags>Tags
-</a><a class="a-block nav-link-item false" href=/posts>Archive</a></div><div class=nav-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://risehere.net/>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-2024 DAITA</div></div><div id=extraContainer class=extra-container><div class=toc-wrapper><div class=toc><div class=toc-content><center>- CATALOG -</center><ul><li><a href=#mcp-%ec%86%8c%ea%b0%9c class=nav-mcp-소개>MCP 소개</a></li><li><a href=#mcp%ec%9d%98-%ea%b5%ac%ec%a1%b0%ec%99%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac class=nav-mcp의-구조와-작동-원리>MCP의 구조와 작동 원리</a></li><li><a href=#mcp%ec%9d%98-%ed%98%81%ec%8b%a0%ec%a0%81-%ea%b8%b0%ec%88%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95 class=nav-mcp의-혁신적-기술-및-특징>MCP의 혁신적 기술 및 특징</a></li><ul><li><a href=#%ed%91%9c%ec%a4%80%ed%99%94%eb%90%9c-%eb%8f%84%ea%b5%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4 class=nav-표준화된-도구-인터페이스>표준화된 도구 인터페이스</a></li><li><a href=#nm-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%86%8c class=nav-nm-문제-해소>N×M 문제 해소</a></li><li><a href=#%ec%9e%ac%ed%98%84%ec%84%b1 class=nav-재현성>재현성</a></li><li><a href=#%eb%8f%99%ec%a0%81-%ea%b2%80%ec%83%89 class=nav-동적-검색>동적 검색</a></li><li><a href=#%ec%96%91%eb%b0%a9%ed%96%a5-%eb%b0%8f-%eb%b3%b4%ec%95%88 class=nav-양방향-및-보안>양방향 및 보안</a></li><li><a href=#%ed%99%95%ec%9e%a5%ec%84%b1 class=nav-확장성>확장성</a></li><ul><li><a href=#%ea%b8%b0%ec%a1%b4-api%ec%99%80-mcp%ec%9d%98-%ec%b0%a8%ec%9d%b4 class=nav-기존-api와-mcp의-차이>기존 API와 MCP의 차이</a></li></ul></ul><li><a href=#mcp%eb%8a%94-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%8f%99%ec%9e%91%ed%95%98%eb%82%98%ec%9a%94 class=nav-mcp는-어떻게-동작하나요>MCP는 어떻게 동작하나요?</a></li><ul><ul><li><a href=#-mcp%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%97%ac%ed%96%89-%ea%b3%84%ed%9a%8d-%ec%88%98%eb%a6%bd-%ec%98%88%ec%8b%9c class=nav--mcp를-활용한-여행-계획-수립-예시>🧭 MCP를 활용한 여행 계획 수립 예시</a></li></ul></ul><li><a href=#%ec%99%9c-%ec%9d%b4%eb%a0%87%ea%b2%8c-%ed%99%94%ec%a0%9c%ea%b0%80-%eb%90%98%ec%97%88%ec%9d%84%ea%b9%8c-mcp%ea%b0%80-%ec%8a%b9%eb%a6%ac%ed%95%9c-%ec%9d%b4%ec%9c%a0%eb%8a%94 class=nav-왜-이렇게-화제가-되었을까-mcp가-승리한-이유는>왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?</a></li></ul></div></div></div><div class=pagination><a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }"><i class="material-icons pagination-action-icon">keyboard_arrow_up</i></a></div></div><div id=single-column-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://risehere.net/>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-2024 DAITA</div></div><script src=/js/journal.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=5" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="MCP(Model Context Protocol)에 대한 설명">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:url" content="//localhost:1313/blog/mcp/">
+  <meta property="og:site_name" content="DAITA">
+  <meta property="og:title" content="MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까">
+  <meta property="og:description" content="MCP(Model Context Protocol)에 대한 설명">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-04-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-30T00:00:00+00:00">
+    <meta property="article:tag" content="Mcp">
+    <meta property="article:tag" content="Protocol">
+    <meta property="article:tag" content="Agent">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Llm">
+    <meta property="article:tag" content="Anthropic">
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까">
+  <meta name="twitter:description" content="MCP(Model Context Protocol)에 대한 설명">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.e0cca49fb5094f3265ef0d4ddc66a0192d21691630c1a427951efefb0e42a809.css" integrity="sha256-4Mykn7UJTzJl7w1N3GagGS0haRYwwaQnlR7&#43;&#43;w5CqAk=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about/">
+                    About
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/blog">
+                    Blog
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/services/">
+                    Services
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/posts">
+                    Archive
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp-%ec%86%8c%ea%b0%9c" class="nav-mcp-소개">
+									MCP 소개
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp%ec%9d%98-%ea%b5%ac%ec%a1%b0%ec%99%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" class="nav-mcp의-구조와-작동-원리">
+									MCP의 구조와 작동 원리
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp%ec%9d%98-%ed%98%81%ec%8b%a0%ec%a0%81-%ea%b8%b0%ec%88%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95" class="nav-mcp의-혁신적-기술-및-특징">
+									MCP의 혁신적 기술 및 특징
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%ed%91%9c%ec%a4%80%ed%99%94%eb%90%9c-%eb%8f%84%ea%b5%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4" class="nav-표준화된-도구-인터페이스">
+									표준화된 도구 인터페이스
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#nm-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%86%8c" class="nav-nm-문제-해소">
+									N×M 문제 해소
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ec%9e%ac%ed%98%84%ec%84%b1" class="nav-재현성">
+									재현성
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%eb%8f%99%ec%a0%81-%ea%b2%80%ec%83%89" class="nav-동적-검색">
+									동적 검색
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ec%96%91%eb%b0%a9%ed%96%a5-%eb%b0%8f-%eb%b3%b4%ec%95%88" class="nav-양방향-및-보안">
+									양방향 및 보안
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ed%99%95%ec%9e%a5%ec%84%b1" class="nav-확장성">
+									확장성
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%ea%b8%b0%ec%a1%b4-api%ec%99%80-mcp%ec%9d%98-%ec%b0%a8%ec%9d%b4" class="nav-기존-api와-mcp의-차이">
+									기존 API와 MCP의 차이
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mcp%eb%8a%94-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%8f%99%ec%9e%91%ed%95%98%eb%82%98%ec%9a%94" class="nav-mcp는-어떻게-동작하나요">
+									MCP는 어떻게 동작하나요?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#-mcp%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%97%ac%ed%96%89-%ea%b3%84%ed%9a%8d-%ec%88%98%eb%a6%bd-%ec%98%88%ec%8b%9c" class="nav--mcp를-활용한-여행-계획-수립-예시">
+									🧭 MCP를 활용한 여행 계획 수립 예시
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%ec%99%9c-%ec%9d%b4%eb%a0%87%ea%b2%8c-%ed%99%94%ec%a0%9c%ea%b0%80-%eb%90%98%ec%97%88%ec%9d%84%ea%b9%8c-mcp%ea%b0%80-%ec%8a%b9%eb%a6%ac%ed%95%9c-%ec%9d%b4%ec%9c%a0%eb%8a%94" class="nav-왜-이렇게-화제가-되었을까-mcp가-승리한-이유는">
+									왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="//localhost:1313/">
+            D<span class="red">AI</span>TA
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="//localhost:1313/">
+        <div class="single-column-header-title">D<span class="red">AI</span>TA</div>
+        
+        <div class="single-column-header-subtitle">My Personal Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            <div class="post-head-wrapper-text-only">
+                <div class="post-title">
+                    MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까
+                    
+                    <div class="post-subtitle">
+                        MCP(Model Context Protocol)에 대한 설명
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2025-04-30
+                        </time>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body" v-pre>
+                    <h1 id="mcp-소개">MCP 소개</h1>
+<p><a href="https://modelcontextprotocol.io/introduction">Model Context Protocol</a> (MCP)는 <a href="https://www.anthropic.com/news/model-context-protocol">Anthropic에서 2024년 말에 도입한</a>   새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 <strong>USB-C</strong>와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.</p>
+<p><img src="https://www.philschmid.de/static/blog/mcp-introduction/api.png" alt="api"></p>
+<p align="center">
+  <a href="https://www.philschmid.de/mcp-introduction">출처</a>
+</p>
+<h1 id="mcp의-구조와-작동-원리">MCP의 구조와 작동 원리</h1>
+<p>MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.</p>
+<ul>
+<li><strong>Host</strong>: 사용자가 직접 상호작용하는 애플리케이션으로, 여러 클라이언트를 관리하고 보안 정책을 적용합니다.</li>
+<li><strong>Client</strong>: 호스트 내부에서 MCP 서버와의 연결을 관리하며 기능 협상 및 보안 경계를 유지합니다.</li>
+<li><strong>Server</strong>: 외부 시스템과 MCP를 연결하는 다리 역할로, 표준 API를 통해 도구, 리소스, 프롬프트를 제공합니다.
+<img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview"></li>
+</ul>
+<p align="center">
+  <a href="https://www.philschmid.de/mcp-introduction" align="center">출처</a>
+</p>
+<h1 id="mcp의-혁신적-기술-및-특징">MCP의 혁신적 기술 및 특징</h1>
+<h2 id="표준화된-도구-인터페이스">표준화된 도구 인터페이스</h2>
+<p>MCP는 다음의 세 가지 인터페이스를 표준화하여 제공합니다:</p>
+<ul>
+<li><strong>Tools (Model-controlled)</strong>: AI가 특정 작업 수행을 위해 호출하는 함수(API)</li>
+<li><strong>Resources (Application-controlled)</strong>: AI가 접근 가능한 데이터 소스</li>
+<li><strong>Prompts (User-controlled)</strong>: 특정 작업 수행을 위한 사전 정의된 템플릿
+<img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview"></li>
+</ul>
+<p align="center">
+  <a href="https://www.philschmid.de/mcp-introduction" align="center">출처</a>
+</p>
+<h2 id="nm-문제-해소">N×M 문제 해소</h2>
+<p>기존의 복잡한 통합 문제를 해결해 MCP 서버 하나만 개발하면 여러 AI 클라이언트와 통합이 가능합니다.</p>
+<h2 id="재현성">재현성</h2>
+<p>모든 데이터셋, 환경 설정, 하이퍼파라미터 등을 통합 관리하여 결과의 재현성을 높입니다.</p>
+<h2 id="동적-검색">동적 검색</h2>
+<p>AI 모델이 사용 가능한 도구를 동적으로 검색하고 활용할 수 있게 합니다.</p>
+<h2 id="양방향-및-보안">양방향 및 보안</h2>
+<p>MCP는 실시간 양방향 통신을 지원하며 OAuth 2.1 인증 프레임워크를 통해 강력한 보안과 규정 준수를 보장합니다.</p>
+<h2 id="확장성">확장성</h2>
+<p>컨텍스트 관리를 표준화하여 LLM의 효율성을 높이고, 명확한 역할 분리로 보안 제어를 강화합니다.</p>
+<h3 id="기존-api와-mcp의-차이">기존 API와 MCP의 차이</h3>
+<ul>
+<li><strong>설계 목적의 차이</strong>
+<ul>
+<li>기존 API(OpenAPI, GraphQL, SOAP 등): 특정 기능 수행 및 데이터 검색 중심</li>
+<li>MCP: AI 에이전트 및 언어 모델(LLM)의 컨텍스트 활용과 추론 능력 향상에 특화</li>
+</ul>
+</li>
+<li><strong>통신 방식의 차이</strong>
+<ul>
+<li>기존 API: 단방향 요청-응답 방식</li>
+<li>MCP: 실시간 양방향 통신 지원, 복잡한 워크플로 관리 및 자율적 작업 수행 가능</li>
+</ul>
+</li>
+</ul>
+<h1 id="mcp는-어떻게-동작하나요">MCP는 어떻게 동작하나요?</h1>
+<p><img src="https://www.philschmid.de/static/blog/mcp-introduction/architecture.png" alt="architecture"></p>
+<p align="center">
+  <a href="https://www.philschmid.de/mcp-introduction" align="center">출처</a>
+</p>
+<p>다음은 **&ldquo;사용자가 서울로 주말 여행을 떠나고 싶어 하며, 날씨 정보, 인기 여행지, 현지 맛집, 대중교통 정보를 고려해 여행 계획을 수립하는 경우&rdquo;**를 가정한 MCP 동작 방식 예시입니다:</p>
+<h3 id="-mcp를-활용한-여행-계획-수립-예시">🧭 MCP를 활용한 여행 계획 수립 예시</h3>
+<p><strong>가정: 사용자가 주말 동안 서울을 여행하고 싶어 하며, 다음과 같은 정보를 포함하여 여행 일정을 계획하려 합니다.</strong></p>
+<ul>
+<li>서울의 주말 날씨 정보</li>
+<li>서울의 인기 관광 명소</li>
+<li>현지인이 추천하는 서울 맛집</li>
+<li>서울 내 교통편 및 대중교통 정보</li>
+</ul>
+<p>이 가정을 바탕으로 MCP의 동작 흐름은 다음과 같습니다:</p>
+<ol>
+<li><strong>초기화 (Initialization)</strong>
+<ul>
+<li>Host 앱(예: Claude Desktop)이 시작되면 MCP 클라이언트가 생성되어 MCP 서버와 연결을 설정합니다.</li>
+</ul>
+</li>
+<li><strong>탐색 (Discovery)</strong>
+<ul>
+<li>클라이언트는 서버가 제공하는 기능(도구, 리소스, 프롬프트)을 확인합니다.</li>
+<li>서버는 &ldquo;날씨 정보 조회&rdquo;, &ldquo;관광지 추천&rdquo;, &ldquo;맛집 리스트&rdquo;, &ldquo;대중교통 조회&rdquo; 등의 기능을 제공합니다.</li>
+</ul>
+</li>
+<li><strong>컨텍스트 제공 (Context Provision)</strong>
+<ul>
+<li>사용자가 &ldquo;서울에서 주말 여행을 계획하고 싶어요&quot;라고 입력하면, 호스트는 해당 컨텍스트를 MCP가 이해할 수 있는 형태로 제공합니다.</li>
+</ul>
+</li>
+<li><strong>호출 (Invocation)</strong>
+<ul>
+<li>AI 모델이 &ldquo;서울의 이번 주말 날씨 정보&rdquo;, &ldquo;서울의 인기 관광지 추천&rdquo;, &ldquo;서울 현지 맛집 목록&rdquo;, &ldquo;서울 교통수단 정보&quot;가 필요하다고 판단하고 요청을 생성합니다.</li>
+<li>Host는 이를 MCP 클라이언트를 통해 서버로 전달합니다.</li>
+</ul>
+</li>
+<li><strong>실행 (Execution)</strong>
+<ul>
+<li>MCP 서버는 요청을 받고 각각의 정보를 수집합니다. 예를 들어 날씨 API, 관광정보 데이터베이스, 집 추천 플랫폼, 대중교통 API 등에서 데이터를 조회합니다.</li>
+</ul>
+</li>
+<li><strong>응답 (Response)</strong>
+<ul>
+<li>서버는 수집된 날씨 정보, 인기 관광지 목록, 맛집 정보, 교통 정보를 클라이언트를 통해 Host로 반환합니다.</li>
+</ul>
+</li>
+<li><strong>완료 (Completion)</strong>
+<ul>
+<li>Host는 전달받은 정보를 AI 모델 컨텍스트에 통합하여, 사용자에게 최적화된 서울 여행 일정을 추천합니다.</li>
+</ul>
+</li>
+</ol>
+<h1 id="왜-이렇게-화제가-되었을까-mcp가-승리한-이유는">왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?</h1>
+<ul>
+<li><strong>AI-Native 설계</strong>
+<ul>
+<li>MCP는 AI 에이전트 요구에 맞춰 설계됨</li>
+<li>도구(Tools), 리소스(Resources), 프롬프트(Prompts)의 명확한 역할 구분</li>
+</ul>
+</li>
+<li><strong>우수한 오픈 명세와 강력한 후원</strong>
+<ul>
+<li>뛰어난 공개 명세 제공 (명세 자체로 경쟁자 압도)</li>
+</ul>
+</li>
+<li><strong>검증된 기술 기반</strong>
+<ul>
+<li>기존의 Language Server Protocol(LSP), JSON-RPC 2.0 등 신뢰성 높은 표준 활용</li>
+</ul>
+</li>
+<li><strong>강력한 초기 생태계와 직접 활용(Dogfooding)</strong>
+<ul>
+<li>Anthropic이 Claude Desktop, git, Slack 등 다양한 내부 레퍼런스 구현 제</li>
+<li>MCP Inspector, SDK(Python, TypeScript, Java, Kotlin, C# 등) 지원으로 초기 확산 가속화</li>
+</ul>
+</li>
+<li><strong>네트워크 효과로 인한 확산</strong>
+<ul>
+<li>Cursor, Windsurf, Composio 등의 기업과 커뮤니티가 빠르게 MCP를 통합 및 확장</li>
+<li>OpenAI를 포함한 주요 기업들도 MCP 지원 발표</li>
+<li>GitHub, Slack, 데이터베이스, Docker 등 수천 개의 MCP 커뮤니티 서버 구축 활성화</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+            </div>
+            
+            <nav class="post-pagination">
+                
+                <a class="newer-posts" href="/blog/test-content/">
+                    Next<br>Sample
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/about/">
+                    Previous<br>About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="//localhost:1313/">
+    
+        <div class="nav-title">
+            D<span class="red">AI</span>TA
+        </div>
+        
+        <div class="nav-subtitle">
+            My Personal Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about/">
+                About
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/blog">
+                Blog
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/services/">
+                Services
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/posts">
+                Archive
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024 DAITA
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp-%ec%86%8c%ea%b0%9c" class="nav-mcp-소개">
+									MCP 소개
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp%ec%9d%98-%ea%b5%ac%ec%a1%b0%ec%99%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" class="nav-mcp의-구조와-작동-원리">
+									MCP의 구조와 작동 원리
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mcp%ec%9d%98-%ed%98%81%ec%8b%a0%ec%a0%81-%ea%b8%b0%ec%88%a0-%eb%b0%8f-%ed%8a%b9%ec%a7%95" class="nav-mcp의-혁신적-기술-및-특징">
+									MCP의 혁신적 기술 및 특징
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%ed%91%9c%ec%a4%80%ed%99%94%eb%90%9c-%eb%8f%84%ea%b5%ac-%ec%9d%b8%ed%84%b0%ed%8e%98%ec%9d%b4%ec%8a%a4" class="nav-표준화된-도구-인터페이스">
+									표준화된 도구 인터페이스
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#nm-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%86%8c" class="nav-nm-문제-해소">
+									N×M 문제 해소
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ec%9e%ac%ed%98%84%ec%84%b1" class="nav-재현성">
+									재현성
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%eb%8f%99%ec%a0%81-%ea%b2%80%ec%83%89" class="nav-동적-검색">
+									동적 검색
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ec%96%91%eb%b0%a9%ed%96%a5-%eb%b0%8f-%eb%b3%b4%ec%95%88" class="nav-양방향-및-보안">
+									양방향 및 보안
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%ed%99%95%ec%9e%a5%ec%84%b1" class="nav-확장성">
+									확장성
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%ea%b8%b0%ec%a1%b4-api%ec%99%80-mcp%ec%9d%98-%ec%b0%a8%ec%9d%b4" class="nav-기존-api와-mcp의-차이">
+									기존 API와 MCP의 차이
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#mcp%eb%8a%94-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%8f%99%ec%9e%91%ed%95%98%eb%82%98%ec%9a%94" class="nav-mcp는-어떻게-동작하나요">
+									MCP는 어떻게 동작하나요?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#-mcp%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%97%ac%ed%96%89-%ea%b3%84%ed%9a%8d-%ec%88%98%eb%a6%bd-%ec%98%88%ec%8b%9c" class="nav--mcp를-활용한-여행-계획-수립-예시">
+									🧭 MCP를 활용한 여행 계획 수립 예시
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%ec%99%9c-%ec%9d%b4%eb%a0%87%ea%b2%8c-%ed%99%94%ec%a0%9c%ea%b0%80-%eb%90%98%ec%97%88%ec%9d%84%ea%b9%8c-mcp%ea%b0%80-%ec%8a%b9%eb%a6%ac%ed%95%9c-%ec%9d%b4%ec%9c%a0%eb%8a%94" class="nav-왜-이렇게-화제가-되었을까-mcp가-승리한-이유는">
+									왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div>
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024 DAITA
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
