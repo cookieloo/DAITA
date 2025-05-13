@@ -1,13 +1,18 @@
 baseURL = "/"
+theme = "diary"
+title = "DAITA"
+
+# Language and i18n
 defaultContentLanguage = "en"
 languageCode = "en-us"
-title = "DAITA"
-theme = "diary"
 
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
+    title = "DAITA"
+    [languages.en.params]
+      subtitle = "My Personal Blog"
 
 [params]
 subtitle = "My Personal Blog"
