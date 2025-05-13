@@ -1,7 +1,13 @@
 baseURL = "/"
+defaultContentLanguage = "en"
 languageCode = "en-us"
 title = "DAITA"
 theme = "diary"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
 
 [params]
 subtitle = "My Personal Blog"
