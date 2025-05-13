@@ -1,11 +1,13 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>landing main page on DAITA</title><link>https://example.org/</link><description>Recent content in landing main page on DAITA</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Jun 2024 12:00:00 +0900</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Twitter Card Sample</title><link>https://example.org/blog/twitter-card-sample/</link><pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate><guid>https://example.org/blog/twitter-card-sample/</guid><description>DAITA https://example.org/blog/twitter-card-sample/ -&lt;h1 id="twitter-card-예시">Twitter Card 예시&lt;/h1>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>landing main page on DAITA</title><link>/</link><description>Recent content in landing main page on DAITA</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Jun 2024 12:00:00 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Twitter Card Sample</title><link>/blog/twitter-card-sample/</link><pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate><guid>/blog/twitter-card-sample/</guid><description>DAITA /blog/twitter-card-sample/ -&lt;h1 id="twitter-card-예시">Twitter Card 예시&lt;/h1>
 &lt;p>이 포스트는 &lt;code>featured_image&lt;/code>와 &lt;code>images&lt;/code> 필드를 사용하여 Twitter Card(소셜 미리보기 카드)가 어떻게 보이는지 보여줍니다.&lt;/p>
 &lt;p>&lt;img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="샘플 이미지">&lt;/p>
-- https://example.org/blog/twitter-card-sample/ -</description></item><item><title>Sample</title><link>https://example.org/blog/test-content/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://example.org/blog/test-content/</guid><description>DAITA https://example.org/blog/test-content/ -&lt;h1 id="hello-world">hello world!&lt;/h1>
-- https://example.org/blog/test-content/ -</description></item><item><title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title><link>https://example.org/blog/mcp/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>https://example.org/blog/mcp/</guid><description>DAITA https://example.org/blog/mcp/ -&lt;h1 id="mcp-소개">MCP 소개&lt;/h1>
+- /blog/twitter-card-sample/ -</description></item><item><title>Sample</title><link>/blog/test-content/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>/blog/test-content/</guid><description>DAITA /blog/test-content/ -&lt;h1 id="hello-world">hello world!&lt;/h1>
+- /blog/test-content/ -</description></item><item><title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title><link>/blog/mcp/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>/blog/mcp/</guid><description>DAITA /blog/mcp/ -&lt;h1 id="mcp-소개">MCP 소개&lt;/h1>
 &lt;p>&lt;a href="https://modelcontextprotocol.io/introduction">Model Context Protocol&lt;/a> (MCP)는 &lt;a href="https://www.anthropic.com/news/model-context-protocol">Anthropic에서 2024년 말에 도입한&lt;/a> 새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 &lt;strong>USB-C&lt;/strong>와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.&lt;/p>
 &lt;p>&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/api.png" alt="api">&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction">출처&lt;/a>
+&lt;/p>
 &lt;h1 id="mcp의-구조와-작동-원리">MCP의 구조와 작동 원리&lt;/h1>
 &lt;p>MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.&lt;/p>
 &lt;ul>
@@ -14,7 +16,9 @@
 &lt;li>&lt;strong>Server&lt;/strong>: 외부 시스템과 MCP를 연결하는 다리 역할로, 표준 API를 통해 도구, 리소스, 프롬프트를 제공합니다.
 &lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview">&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
 &lt;h1 id="mcp의-혁신적-기술-및-특징">MCP의 혁신적 기술 및 특징&lt;/h1>
 &lt;h2 id="표준화된-도구-인터페이스">표준화된 도구 인터페이스&lt;/h2>
 &lt;p>MCP는 다음의 세 가지 인터페이스를 표준화하여 제공합니다:&lt;/p>
@@ -24,7 +28,9 @@
 &lt;li>&lt;strong>Prompts (User-controlled)&lt;/strong>: 특정 작업 수행을 위한 사전 정의된 템플릿
 &lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview">&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
 &lt;h2 id="nm-문제-해소">N×M 문제 해소&lt;/h2>
 &lt;p>기존의 복잡한 통합 문제를 해결해 MCP 서버 하나만 개발하면 여러 AI 클라이언트와 통합이 가능합니다.&lt;/p>
 &lt;h2 id="재현성">재현성&lt;/h2>
@@ -52,7 +58,9 @@
 &lt;/ul>
 &lt;h1 id="mcp는-어떻게-동작하나요">MCP는 어떻게 동작하나요?&lt;/h1>
 &lt;p>&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/architecture.png" alt="architecture">&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
 &lt;p>다음은 **&amp;ldquo;사용자가 서울로 주말 여행을 떠나고 싶어 하며, 날씨 정보, 인기 여행지, 현지 맛집, 대중교통 정보를 고려해 여행 계획을 수립하는 경우&amp;rdquo;**를 가정한 MCP 동작 방식 예시입니다:&lt;/p>
 &lt;h3 id="-mcp를-활용한-여행-계획-수립-예시">🧭 MCP를 활용한 여행 계획 수립 예시&lt;/h3>
 &lt;p>&lt;strong>가정: 사용자가 주말 동안 서울을 여행하고 싶어 하며, 다음과 같은 정보를 포함하여 여행 일정을 계획하려 합니다.&lt;/strong>&lt;/p>
@@ -134,4 +142,4 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-- https://example.org/blog/mcp/ -</description></item></channel></rss><div class="landing-content"><h1/><p/></div>
+- /blog/mcp/ -</description></item></channel></rss><div class="landing-content"><h1/><p/></div>

@@ -1,21 +1,54 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'DAITA'
-theme = 'diary'
+baseURL = "/"
+languageCode = "en-us"
+title = "DAITA"
+theme = "diary"
 
+[params]
+subtitle = "My Personal Blog"
+enableGitalk = false
+contentLanguage = "en"
+contentLanguageName = "English"
+showAllPostsOnHomePage = true
+hasTwitterCard = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[security.goldmark.renderer]
+  unsafe = true
+
+[security]
+  enableInlineShortcodes = true
+
+[build]
+  noJSConfigInAssets = true
+  writeStats = false
 
 [menus]
   [[menus.main]]
-    name = 'Blog'
-    url = '/blog'
+    name = "Blog"
+    url = "/blog"
     weight = 2
   [[menus.main]]
-    name = 'Services'
-    pageRef = '/services'
+    name = "Services"
+    pageRef = "/services"
     weight = 3
   [[menus.main]]
-    name = 'About'
-    pageRef = '/about'
+    name = "About"
+    pageRef = "/about"
     weight = 1
