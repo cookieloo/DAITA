@@ -13,18 +13,6 @@
     
     
         <item>
-        <title>Sample</title>
-        <link>http://localhost:1313/blog/test-content/</link>
-        <pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate>
-        
-        <guid>http://localhost:1313/blog/test-content/</guid>
-        <description>DAITA http://localhost:1313/blog/test-content/ -&lt;h1 id=&#34;hello-world&#34;&gt;hello world!&lt;/h1&gt;
-- http://localhost:1313/blog/test-content/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>Twitter Card Sample</title>
         <link>http://localhost:1313/blog/twitter-card-sample/</link>
         <pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate>
@@ -39,9 +27,21 @@
     
     
         <item>
-        <title>MCP(Model Context Protocol)이 도데체 무엇인데 이 난리일까</title>
+        <title>Sample</title>
+        <link>http://localhost:1313/blog/test-content/</link>
+        <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/test-content/</guid>
+        <description>DAITA http://localhost:1313/blog/test-content/ -&lt;h1 id=&#34;hello-world&#34;&gt;hello world!&lt;/h1&gt;
+- http://localhost:1313/blog/test-content/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title>
         <link>http://localhost:1313/blog/mcp/</link>
-        <pubDate>Wed, 30 Apr 2025 12:00:00 +0900</pubDate>
+        <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/blog/mcp/</guid>
         <description>DAITA http://localhost:1313/blog/mcp/ -&lt;h1 id=&#34;mcp-소개&#34;&gt;MCP 소개&lt;/h1&gt;
