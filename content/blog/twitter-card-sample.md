@@ -1,16 +1,6 @@
 ---
 title: "Twitter Card Sample"
-date: 2025-05-05T12:00:00+09:00
-description: "이 글은 Twitter Card 예시를 보여줍니다."
-tags:
-  - "sample"
-  - "twitter-card"
-featured_image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=100"
-images:
-  - "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800"
-categories:
-  - "Sample"
-comment: true
+date: 2025-05-05
 draft: false
 ---
 
