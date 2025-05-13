@@ -1,19 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mcp on DAITA</title>
-    <link>//localhost:1313/tags/mcp/</link>
-    <description>Recent content in Mcp on DAITA</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title>
-      <link>//localhost:1313/blog/mcp/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/blog/mcp/</guid>
-      <description>&lt;h1 id=&#34;mcp-소개&#34;&gt;MCP 소개&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol&lt;/a&gt; (MCP)는 &lt;a href=&#34;https://www.anthropic.com/news/model-context-protocol&#34;&gt;Anthropic에서 2024년 말에 도입한&lt;/a&gt;   새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 &lt;strong&gt;USB-C&lt;/strong&gt;와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.philschmid.de/static/blog/mcp-introduction/api.png&#34; alt=&#34;api&#34;&gt;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;a href=&#34;https://www.philschmid.de/mcp-introduction&#34;&gt;출처&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;h1 id=&#34;mcp의-구조와-작동-원리&#34;&gt;MCP의 구조와 작동 원리&lt;/h1&gt;&#xA;&lt;p&gt;MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mcp on DAITA</title><link>/tags/mcp/</link><description>Recent content in Mcp on DAITA</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mcp/index.xml" rel="self" type="application/rss+xml"/><item><title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title><link>/blog/mcp/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>/blog/mcp/</guid><description>&lt;h1 id="mcp-소개">MCP 소개&lt;/h1>
+&lt;p>&lt;a href="https://modelcontextprotocol.io/introduction">Model Context Protocol&lt;/a> (MCP)는 &lt;a href="https://www.anthropic.com/news/model-context-protocol">Anthropic에서 2024년 말에 도입한&lt;/a> 새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 &lt;strong>USB-C&lt;/strong>와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.&lt;/p>
+&lt;p>&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/api.png" alt="api">&lt;/p>
+&lt;p align="center">
+ &lt;a href="https://www.philschmid.de/mcp-introduction">출처&lt;/a>
+&lt;/p>
+&lt;h1 id="mcp의-구조와-작동-원리">MCP의 구조와 작동 원리&lt;/h1>
+&lt;p>MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.&lt;/p></description></item></channel></rss>

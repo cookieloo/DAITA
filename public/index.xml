@@ -1,201 +1,145 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title> landing main page on DAITA</title>
-    <link>//localhost:1313/</link>
-    <description>Recent content in  landing main page on DAITA</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 10 Jun 2024 12:00:00 +0900</lastBuildDate>
-    
-        <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>Twitter Card Sample</title>
-        <link>//localhost:1313/blog/twitter-card-sample/</link>
-        <pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate>
-        
-        <guid>//localhost:1313/blog/twitter-card-sample/</guid>
-        <description>DAITA //localhost:1313/blog/twitter-card-sample/ -&lt;h1 id=&#34;twitter-card-예시&#34;&gt;Twitter Card 예시&lt;/h1&gt;
-&lt;p&gt;이 포스트는 &lt;code&gt;featured_image&lt;/code&gt;와 &lt;code&gt;images&lt;/code&gt; 필드를 사용하여 Twitter Card(소셜 미리보기 카드)가 어떻게 보이는지 보여줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&#34; alt=&#34;샘플 이미지&#34;&gt;&lt;/p&gt;
-- //localhost:1313/blog/twitter-card-sample/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Sample</title>
-        <link>//localhost:1313/blog/test-content/</link>
-        <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>//localhost:1313/blog/test-content/</guid>
-        <description>DAITA //localhost:1313/blog/test-content/ -&lt;h1 id=&#34;hello-world&#34;&gt;hello world!&lt;/h1&gt;
-- //localhost:1313/blog/test-content/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title>
-        <link>//localhost:1313/blog/mcp/</link>
-        <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-        
-        <guid>//localhost:1313/blog/mcp/</guid>
-        <description>DAITA //localhost:1313/blog/mcp/ -&lt;h1 id=&#34;mcp-소개&#34;&gt;MCP 소개&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://modelcontextprotocol.io/introduction&#34;&gt;Model Context Protocol&lt;/a&gt; (MCP)는 &lt;a href=&#34;https://www.anthropic.com/news/model-context-protocol&#34;&gt;Anthropic에서 2024년 말에 도입한&lt;/a&gt;   새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 &lt;strong&gt;USB-C&lt;/strong&gt;와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.philschmid.de/static/blog/mcp-introduction/api.png&#34; alt=&#34;api&#34;&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://www.philschmid.de/mcp-introduction&#34;&gt;출처&lt;/a&gt;
-&lt;/p&gt;
-&lt;h1 id=&#34;mcp의-구조와-작동-원리&#34;&gt;MCP의 구조와 작동 원리&lt;/h1&gt;
-&lt;p&gt;MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;: 사용자가 직접 상호작용하는 애플리케이션으로, 여러 클라이언트를 관리하고 보안 정책을 적용합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;: 호스트 내부에서 MCP 서버와의 연결을 관리하며 기능 협상 및 보안 경계를 유지합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt;: 외부 시스템과 MCP를 연결하는 다리 역할로, 표준 API를 통해 도구, 리소스, 프롬프트를 제공합니다.
-&lt;img src=&#34;https://www.philschmid.de/static/blog/mcp-introduction/overview.png&#34; alt=&#34;overview&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://www.philschmid.de/mcp-introduction&#34; align=&#34;center&#34;&gt;출처&lt;/a&gt;
-&lt;/p&gt;
-&lt;h1 id=&#34;mcp의-혁신적-기술-및-특징&#34;&gt;MCP의 혁신적 기술 및 특징&lt;/h1&gt;
-&lt;h2 id=&#34;표준화된-도구-인터페이스&#34;&gt;표준화된 도구 인터페이스&lt;/h2&gt;
-&lt;p&gt;MCP는 다음의 세 가지 인터페이스를 표준화하여 제공합니다:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Tools (Model-controlled)&lt;/strong&gt;: AI가 특정 작업 수행을 위해 호출하는 함수(API)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Resources (Application-controlled)&lt;/strong&gt;: AI가 접근 가능한 데이터 소스&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Prompts (User-controlled)&lt;/strong&gt;: 특정 작업 수행을 위한 사전 정의된 템플릿
-&lt;img src=&#34;https://www.philschmid.de/static/blog/mcp-introduction/overview.png&#34; alt=&#34;overview&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://www.philschmid.de/mcp-introduction&#34; align=&#34;center&#34;&gt;출처&lt;/a&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;nm-문제-해소&#34;&gt;N×M 문제 해소&lt;/h2&gt;
-&lt;p&gt;기존의 복잡한 통합 문제를 해결해 MCP 서버 하나만 개발하면 여러 AI 클라이언트와 통합이 가능합니다.&lt;/p&gt;
-&lt;h2 id=&#34;재현성&#34;&gt;재현성&lt;/h2&gt;
-&lt;p&gt;모든 데이터셋, 환경 설정, 하이퍼파라미터 등을 통합 관리하여 결과의 재현성을 높입니다.&lt;/p&gt;
-&lt;h2 id=&#34;동적-검색&#34;&gt;동적 검색&lt;/h2&gt;
-&lt;p&gt;AI 모델이 사용 가능한 도구를 동적으로 검색하고 활용할 수 있게 합니다.&lt;/p&gt;
-&lt;h2 id=&#34;양방향-및-보안&#34;&gt;양방향 및 보안&lt;/h2&gt;
-&lt;p&gt;MCP는 실시간 양방향 통신을 지원하며 OAuth 2.1 인증 프레임워크를 통해 강력한 보안과 규정 준수를 보장합니다.&lt;/p&gt;
-&lt;h2 id=&#34;확장성&#34;&gt;확장성&lt;/h2&gt;
-&lt;p&gt;컨텍스트 관리를 표준화하여 LLM의 효율성을 높이고, 명확한 역할 분리로 보안 제어를 강화합니다.&lt;/p&gt;
-&lt;h3 id=&#34;기존-api와-mcp의-차이&#34;&gt;기존 API와 MCP의 차이&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;설계 목적의 차이&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;기존 API(OpenAPI, GraphQL, SOAP 등): 특정 기능 수행 및 데이터 검색 중심&lt;/li&gt;
-&lt;li&gt;MCP: AI 에이전트 및 언어 모델(LLM)의 컨텍스트 활용과 추론 능력 향상에 특화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;통신 방식의 차이&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;기존 API: 단방향 요청-응답 방식&lt;/li&gt;
-&lt;li&gt;MCP: 실시간 양방향 통신 지원, 복잡한 워크플로 관리 및 자율적 작업 수행 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;mcp는-어떻게-동작하나요&#34;&gt;MCP는 어떻게 동작하나요?&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.philschmid.de/static/blog/mcp-introduction/architecture.png&#34; alt=&#34;architecture&#34;&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://www.philschmid.de/mcp-introduction&#34; align=&#34;center&#34;&gt;출처&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;다음은 **&amp;ldquo;사용자가 서울로 주말 여행을 떠나고 싶어 하며, 날씨 정보, 인기 여행지, 현지 맛집, 대중교통 정보를 고려해 여행 계획을 수립하는 경우&amp;rdquo;**를 가정한 MCP 동작 방식 예시입니다:&lt;/p&gt;
-&lt;h3 id=&#34;-mcp를-활용한-여행-계획-수립-예시&#34;&gt;🧭 MCP를 활용한 여행 계획 수립 예시&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;가정: 사용자가 주말 동안 서울을 여행하고 싶어 하며, 다음과 같은 정보를 포함하여 여행 일정을 계획하려 합니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;서울의 주말 날씨 정보&lt;/li&gt;
-&lt;li&gt;서울의 인기 관광 명소&lt;/li&gt;
-&lt;li&gt;현지인이 추천하는 서울 맛집&lt;/li&gt;
-&lt;li&gt;서울 내 교통편 및 대중교통 정보&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이 가정을 바탕으로 MCP의 동작 흐름은 다음과 같습니다:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;초기화 (Initialization)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Host 앱(예: Claude Desktop)이 시작되면 MCP 클라이언트가 생성되어 MCP 서버와 연결을 설정합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;탐색 (Discovery)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;클라이언트는 서버가 제공하는 기능(도구, 리소스, 프롬프트)을 확인합니다.&lt;/li&gt;
-&lt;li&gt;서버는 &amp;ldquo;날씨 정보 조회&amp;rdquo;, &amp;ldquo;관광지 추천&amp;rdquo;, &amp;ldquo;맛집 리스트&amp;rdquo;, &amp;ldquo;대중교통 조회&amp;rdquo; 등의 기능을 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;컨텍스트 제공 (Context Provision)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자가 &amp;ldquo;서울에서 주말 여행을 계획하고 싶어요&amp;quot;라고 입력하면, 호스트는 해당 컨텍스트를 MCP가 이해할 수 있는 형태로 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;호출 (Invocation)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;AI 모델이 &amp;ldquo;서울의 이번 주말 날씨 정보&amp;rdquo;, &amp;ldquo;서울의 인기 관광지 추천&amp;rdquo;, &amp;ldquo;서울 현지 맛집 목록&amp;rdquo;, &amp;ldquo;서울 교통수단 정보&amp;quot;가 필요하다고 판단하고 요청을 생성합니다.&lt;/li&gt;
-&lt;li&gt;Host는 이를 MCP 클라이언트를 통해 서버로 전달합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;실행 (Execution)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;MCP 서버는 요청을 받고 각각의 정보를 수집합니다. 예를 들어 날씨 API, 관광정보 데이터베이스, 집 추천 플랫폼, 대중교통 API 등에서 데이터를 조회합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;응답 (Response)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;서버는 수집된 날씨 정보, 인기 관광지 목록, 맛집 정보, 교통 정보를 클라이언트를 통해 Host로 반환합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;완료 (Completion)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Host는 전달받은 정보를 AI 모델 컨텍스트에 통합하여, 사용자에게 최적화된 서울 여행 일정을 추천합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;왜-이렇게-화제가-되었을까-mcp가-승리한-이유는&#34;&gt;왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AI-Native 설계&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;MCP는 AI 에이전트 요구에 맞춰 설계됨&lt;/li&gt;
-&lt;li&gt;도구(Tools), 리소스(Resources), 프롬프트(Prompts)의 명확한 역할 구분&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;우수한 오픈 명세와 강력한 후원&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;뛰어난 공개 명세 제공 (명세 자체로 경쟁자 압도)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;검증된 기술 기반&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;기존의 Language Server Protocol(LSP), JSON-RPC 2.0 등 신뢰성 높은 표준 활용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;강력한 초기 생태계와 직접 활용(Dogfooding)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Anthropic이 Claude Desktop, git, Slack 등 다양한 내부 레퍼런스 구현 제&lt;/li&gt;
-&lt;li&gt;MCP Inspector, SDK(Python, TypeScript, Java, Kotlin, C# 등) 지원으로 초기 확산 가속화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;네트워크 효과로 인한 확산&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Cursor, Windsurf, Composio 등의 기업과 커뮤니티가 빠르게 MCP를 통합 및 확장&lt;/li&gt;
-&lt;li&gt;OpenAI를 포함한 주요 기업들도 MCP 지원 발표&lt;/li&gt;
-&lt;li&gt;GitHub, Slack, 데이터베이스, Docker 등 수천 개의 MCP 커뮤니티 서버 구축 활성화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- //localhost:1313/blog/mcp/ - </description>
-        </item>
-    
-    
-    
-    
-    
-    
-  </channel>
-</rss>
-
-<div class="landing-content">
-  <h1></h1>
-  <p></p>
-</div> 
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>landing main page on DAITA</title><link>/</link><description>Recent content in landing main page on DAITA</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 10 Jun 2024 12:00:00 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Twitter Card Sample</title><link>/blog/twitter-card-sample/</link><pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate><guid>/blog/twitter-card-sample/</guid><description>DAITA /blog/twitter-card-sample/ -&lt;h1 id="twitter-card-예시">Twitter Card 예시&lt;/h1>
+&lt;p>이 포스트는 &lt;code>featured_image&lt;/code>와 &lt;code>images&lt;/code> 필드를 사용하여 Twitter Card(소셜 미리보기 카드)가 어떻게 보이는지 보여줍니다.&lt;/p>
+&lt;p>&lt;img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="샘플 이미지">&lt;/p>
+- /blog/twitter-card-sample/ -</description></item><item><title>Sample</title><link>/blog/test-content/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>/blog/test-content/</guid><description>DAITA /blog/test-content/ -&lt;h1 id="hello-world">hello world!&lt;/h1>
+- /blog/test-content/ -</description></item><item><title>MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까</title><link>/blog/mcp/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>/blog/mcp/</guid><description>DAITA /blog/mcp/ -&lt;h1 id="mcp-소개">MCP 소개&lt;/h1>
+&lt;p>&lt;a href="https://modelcontextprotocol.io/introduction">Model Context Protocol&lt;/a> (MCP)는 &lt;a href="https://www.anthropic.com/news/model-context-protocol">Anthropic에서 2024년 말에 도입한&lt;/a> 새로운 개방형 표준으로, AI 애플리케이션이 다양한 외부 도구, 데이터 소스, 시스템과 원활히 상호 작용할 수 있도록 설계되었습니다. 이는 기존의 파편화된 통합 방식을 대체하고, 도구와 데이터 소스에 대한 보편적인 프레임워크를 제공하여 AI 시스템이 다양한 컨텍스트에 쉽게 접근하도록 지원합니다. MCP는 AI 통합을 위한 &lt;strong>USB-C&lt;/strong>와 같은 역할을 하며, 기존의 복잡한 M×N 문제를 단순한 M+N 문제로 변환합니다.&lt;/p>
+&lt;p>&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/api.png" alt="api">&lt;/p>
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction">출처&lt;/a>
+&lt;/p>
+&lt;h1 id="mcp의-구조와-작동-원리">MCP의 구조와 작동 원리&lt;/h1>
+&lt;p>MCP는 Host-Client-Server의 3층 구조로 설계되었으며 JSON-RPC로 통신합니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Host&lt;/strong>: 사용자가 직접 상호작용하는 애플리케이션으로, 여러 클라이언트를 관리하고 보안 정책을 적용합니다.&lt;/li>
+&lt;li>&lt;strong>Client&lt;/strong>: 호스트 내부에서 MCP 서버와의 연결을 관리하며 기능 협상 및 보안 경계를 유지합니다.&lt;/li>
+&lt;li>&lt;strong>Server&lt;/strong>: 외부 시스템과 MCP를 연결하는 다리 역할로, 표준 API를 통해 도구, 리소스, 프롬프트를 제공합니다.
+&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview">&lt;/li>
+&lt;/ul>
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
+&lt;h1 id="mcp의-혁신적-기술-및-특징">MCP의 혁신적 기술 및 특징&lt;/h1>
+&lt;h2 id="표준화된-도구-인터페이스">표준화된 도구 인터페이스&lt;/h2>
+&lt;p>MCP는 다음의 세 가지 인터페이스를 표준화하여 제공합니다:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tools (Model-controlled)&lt;/strong>: AI가 특정 작업 수행을 위해 호출하는 함수(API)&lt;/li>
+&lt;li>&lt;strong>Resources (Application-controlled)&lt;/strong>: AI가 접근 가능한 데이터 소스&lt;/li>
+&lt;li>&lt;strong>Prompts (User-controlled)&lt;/strong>: 특정 작업 수행을 위한 사전 정의된 템플릿
+&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/overview.png" alt="overview">&lt;/li>
+&lt;/ul>
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
+&lt;h2 id="nm-문제-해소">N×M 문제 해소&lt;/h2>
+&lt;p>기존의 복잡한 통합 문제를 해결해 MCP 서버 하나만 개발하면 여러 AI 클라이언트와 통합이 가능합니다.&lt;/p>
+&lt;h2 id="재현성">재현성&lt;/h2>
+&lt;p>모든 데이터셋, 환경 설정, 하이퍼파라미터 등을 통합 관리하여 결과의 재현성을 높입니다.&lt;/p>
+&lt;h2 id="동적-검색">동적 검색&lt;/h2>
+&lt;p>AI 모델이 사용 가능한 도구를 동적으로 검색하고 활용할 수 있게 합니다.&lt;/p>
+&lt;h2 id="양방향-및-보안">양방향 및 보안&lt;/h2>
+&lt;p>MCP는 실시간 양방향 통신을 지원하며 OAuth 2.1 인증 프레임워크를 통해 강력한 보안과 규정 준수를 보장합니다.&lt;/p>
+&lt;h2 id="확장성">확장성&lt;/h2>
+&lt;p>컨텍스트 관리를 표준화하여 LLM의 효율성을 높이고, 명확한 역할 분리로 보안 제어를 강화합니다.&lt;/p>
+&lt;h3 id="기존-api와-mcp의-차이">기존 API와 MCP의 차이&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>설계 목적의 차이&lt;/strong>
+&lt;ul>
+&lt;li>기존 API(OpenAPI, GraphQL, SOAP 등): 특정 기능 수행 및 데이터 검색 중심&lt;/li>
+&lt;li>MCP: AI 에이전트 및 언어 모델(LLM)의 컨텍스트 활용과 추론 능력 향상에 특화&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>통신 방식의 차이&lt;/strong>
+&lt;ul>
+&lt;li>기존 API: 단방향 요청-응답 방식&lt;/li>
+&lt;li>MCP: 실시간 양방향 통신 지원, 복잡한 워크플로 관리 및 자율적 작업 수행 가능&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="mcp는-어떻게-동작하나요">MCP는 어떻게 동작하나요?&lt;/h1>
+&lt;p>&lt;img src="https://www.philschmid.de/static/blog/mcp-introduction/architecture.png" alt="architecture">&lt;/p>
+&lt;p align="center">
+&lt;a href="https://www.philschmid.de/mcp-introduction" align="center">출처&lt;/a>
+&lt;/p>
+&lt;p>다음은 **&amp;ldquo;사용자가 서울로 주말 여행을 떠나고 싶어 하며, 날씨 정보, 인기 여행지, 현지 맛집, 대중교통 정보를 고려해 여행 계획을 수립하는 경우&amp;rdquo;**를 가정한 MCP 동작 방식 예시입니다:&lt;/p>
+&lt;h3 id="-mcp를-활용한-여행-계획-수립-예시">🧭 MCP를 활용한 여행 계획 수립 예시&lt;/h3>
+&lt;p>&lt;strong>가정: 사용자가 주말 동안 서울을 여행하고 싶어 하며, 다음과 같은 정보를 포함하여 여행 일정을 계획하려 합니다.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>서울의 주말 날씨 정보&lt;/li>
+&lt;li>서울의 인기 관광 명소&lt;/li>
+&lt;li>현지인이 추천하는 서울 맛집&lt;/li>
+&lt;li>서울 내 교통편 및 대중교통 정보&lt;/li>
+&lt;/ul>
+&lt;p>이 가정을 바탕으로 MCP의 동작 흐름은 다음과 같습니다:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>초기화 (Initialization)&lt;/strong>
+&lt;ul>
+&lt;li>Host 앱(예: Claude Desktop)이 시작되면 MCP 클라이언트가 생성되어 MCP 서버와 연결을 설정합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>탐색 (Discovery)&lt;/strong>
+&lt;ul>
+&lt;li>클라이언트는 서버가 제공하는 기능(도구, 리소스, 프롬프트)을 확인합니다.&lt;/li>
+&lt;li>서버는 &amp;ldquo;날씨 정보 조회&amp;rdquo;, &amp;ldquo;관광지 추천&amp;rdquo;, &amp;ldquo;맛집 리스트&amp;rdquo;, &amp;ldquo;대중교통 조회&amp;rdquo; 등의 기능을 제공합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>컨텍스트 제공 (Context Provision)&lt;/strong>
+&lt;ul>
+&lt;li>사용자가 &amp;ldquo;서울에서 주말 여행을 계획하고 싶어요&amp;quot;라고 입력하면, 호스트는 해당 컨텍스트를 MCP가 이해할 수 있는 형태로 제공합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>호출 (Invocation)&lt;/strong>
+&lt;ul>
+&lt;li>AI 모델이 &amp;ldquo;서울의 이번 주말 날씨 정보&amp;rdquo;, &amp;ldquo;서울의 인기 관광지 추천&amp;rdquo;, &amp;ldquo;서울 현지 맛집 목록&amp;rdquo;, &amp;ldquo;서울 교통수단 정보&amp;quot;가 필요하다고 판단하고 요청을 생성합니다.&lt;/li>
+&lt;li>Host는 이를 MCP 클라이언트를 통해 서버로 전달합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>실행 (Execution)&lt;/strong>
+&lt;ul>
+&lt;li>MCP 서버는 요청을 받고 각각의 정보를 수집합니다. 예를 들어 날씨 API, 관광정보 데이터베이스, 집 추천 플랫폼, 대중교통 API 등에서 데이터를 조회합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>응답 (Response)&lt;/strong>
+&lt;ul>
+&lt;li>서버는 수집된 날씨 정보, 인기 관광지 목록, 맛집 정보, 교통 정보를 클라이언트를 통해 Host로 반환합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>완료 (Completion)&lt;/strong>
+&lt;ul>
+&lt;li>Host는 전달받은 정보를 AI 모델 컨텍스트에 통합하여, 사용자에게 최적화된 서울 여행 일정을 추천합니다.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="왜-이렇게-화제가-되었을까-mcp가-승리한-이유는">왜 이렇게 화제가 되었을까? MCP가 승리한 이유는?&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>AI-Native 설계&lt;/strong>
+&lt;ul>
+&lt;li>MCP는 AI 에이전트 요구에 맞춰 설계됨&lt;/li>
+&lt;li>도구(Tools), 리소스(Resources), 프롬프트(Prompts)의 명확한 역할 구분&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>우수한 오픈 명세와 강력한 후원&lt;/strong>
+&lt;ul>
+&lt;li>뛰어난 공개 명세 제공 (명세 자체로 경쟁자 압도)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>검증된 기술 기반&lt;/strong>
+&lt;ul>
+&lt;li>기존의 Language Server Protocol(LSP), JSON-RPC 2.0 등 신뢰성 높은 표준 활용&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>강력한 초기 생태계와 직접 활용(Dogfooding)&lt;/strong>
+&lt;ul>
+&lt;li>Anthropic이 Claude Desktop, git, Slack 등 다양한 내부 레퍼런스 구현 제&lt;/li>
+&lt;li>MCP Inspector, SDK(Python, TypeScript, Java, Kotlin, C# 등) 지원으로 초기 확산 가속화&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>네트워크 효과로 인한 확산&lt;/strong>
+&lt;ul>
+&lt;li>Cursor, Windsurf, Composio 등의 기업과 커뮤니티가 빠르게 MCP를 통합 및 확장&lt;/li>
+&lt;li>OpenAI를 포함한 주요 기업들도 MCP 지원 발표&lt;/li>
+&lt;li>GitHub, Slack, 데이터베이스, Docker 등 수천 개의 MCP 커뮤니티 서버 구축 활성화&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+- /blog/mcp/ -</description></item></channel></rss><div class="landing-content"><h1/><p/></div>
