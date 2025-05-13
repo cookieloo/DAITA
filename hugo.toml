@@ -6,30 +6,37 @@ title = "DAITA"
 defaultContentLanguage = "en"
 languageCode = "en-us"
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "perldoc"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  subtitle = "My Personal Blog"
+  enableOpenGraph = true
+  enableTwitterCards = true
+  enableReadingTime = true
+  enableGitalk = false
+  enableGiscus = false
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
     title = "DAITA"
-    [languages.en.params]
-      subtitle = "My Personal Blog"
-
-[params]
-subtitle = "My Personal Blog"
-enableGitalk = false
-contentLanguage = "en"
-contentLanguageName = "English"
-showAllPostsOnHomePage = true
-hasTwitterCard = true
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
 
 [permalinks]
   posts = "/:year/:month/:title/"
@@ -40,9 +47,6 @@ hasTwitterCard = true
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
 
-[security.goldmark.renderer]
-  unsafe = true
-
 [security]
   enableInlineShortcodes = true
 
@@ -50,16 +54,28 @@ hasTwitterCard = true
   noJSConfigInAssets = true
   writeStats = false
 
-[menus]
-  [[menus.main]]
+[menu]
+  [[menu.main]]
     name = "Blog"
     url = "/blog"
     weight = 2
-  [[menus.main]]
+  [[menu.main]]
     name = "Services"
     pageRef = "/services"
     weight = 3
-  [[menus.main]]
+  [[menu.main]]
     name = "About"
     pageRef = "/about"
     weight = 1
+  [[menu.main]]
+    url = "/categories"
+    name = "Categories"
+    weight = 2
+  [[menu.main]]
+    url = "/tags"
+    name = "Tags"
+    weight = 3
+  [[menu.main]]
+    url = "/posts"
+    name = "Archive"
+    weight = 11
