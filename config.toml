@@ -6,8 +6,29 @@ theme = "diary"
 [params]
 subtitle = "My Personal Blog"
 enableGitalk = false
+contentLanguage = "en"
+contentLanguageName = "English"
+showAllPostsOnHomePage = true
+hasTwitterCard = true
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+
+# Ignore the raw HTML warning
+ignoreLogs = ['warning-goldmark-raw-html']
