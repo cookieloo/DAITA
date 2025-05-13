@@ -1,0 +1,13 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "My Blog"
+theme = "diary"
+
+[params]
+subtitle = "My Personal Blog"
+enableGitalk = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

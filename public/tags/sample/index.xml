@@ -1,33 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Sample on DAITA</title>
-    <link>http://localhost:1313/tags/sample/</link>
-    <description>Recent content in Sample on DAITA</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 May 2025 12:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sample/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Twitter Card Sample</title>
-      <link>http://localhost:1313/blog/twitter-card-sample/</link>
-      <pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/twitter-card-sample/</guid>
-      <description>&lt;h1 id=&#34;twitter-card-예시&#34;&gt;Twitter Card 예시&lt;/h1&gt;&#xA;&lt;p&gt;이 포스트는 &lt;code&gt;featured_image&lt;/code&gt;와 &lt;code&gt;images&lt;/code&gt; 필드를 사용하여 Twitter Card(소셜 미리보기 카드)가 어떻게 보이는지 보여줍니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&#34; alt=&#34;샘플 이미지&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sample</title>
-      <link>http://localhost:1313/blog/test-content/</link>
-      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/test-content/</guid>
-      <description>&lt;h1 id=&#34;hello-world&#34;&gt;hello world!&lt;/h1&gt;</description>
-    </item>
-    <item>
-      <title> landing main page</title>
-      <link>http://localhost:1313/</link>
-      <pubDate>Mon, 10 Jun 2024 12:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/</guid>
-      <description>&lt;p&gt;landing hogo&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample on DAITA</title><link>https://example.org/tags/sample/</link><description>Recent content in Sample on DAITA</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 12:00:00 +0900</lastBuildDate><atom:link href="https://example.org/tags/sample/index.xml" rel="self" type="application/rss+xml"/><item><title>Twitter Card Sample</title><link>https://example.org/blog/twitter-card-sample/</link><pubDate>Mon, 05 May 2025 12:00:00 +0900</pubDate><guid>https://example.org/blog/twitter-card-sample/</guid><description>&lt;h1 id="twitter-card-예시">Twitter Card 예시&lt;/h1>
+&lt;p>이 포스트는 &lt;code>featured_image&lt;/code>와 &lt;code>images&lt;/code> 필드를 사용하여 Twitter Card(소셜 미리보기 카드)가 어떻게 보이는지 보여줍니다.&lt;/p>
+&lt;p>&lt;img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="샘플 이미지">&lt;/p></description></item><item><title>Sample</title><link>https://example.org/blog/test-content/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://example.org/blog/test-content/</guid><description>&lt;h1 id="hello-world">hello world!&lt;/h1></description></item><item><title> landing main page</title><link>https://example.org/</link><pubDate>Mon, 10 Jun 2024 12:00:00 +0900</pubDate><guid>https://example.org/</guid><description>&lt;p>landing hogo&lt;/p></description></item></channel></rss>
