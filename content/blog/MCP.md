@@ -2,11 +2,17 @@
 title: "MCP(Model Context Protocol)가 도데체 무엇인데 이 난리일까"
 date: 2025-04-30
 description: "MCP(Model Context Protocol)에 대한 설명"
-tags: ["mcp", "protocol", "agent","AI","llm","anthropic"]
+tags:
+  - "mcp"
+  - "protocol"
+  - "agent"
+  - "AI"
+  - "llm"
+  - "anthropic"
 featured_image: "https://www.philschmid.de/static/blog/mcp-introduction/api.png"
-images:
-#   - "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800"
-categories: ["AI"]
+images: []
+categories:
+  - "AI"
 comment: true
 draft: false
 ---
